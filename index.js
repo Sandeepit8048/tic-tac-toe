@@ -31,7 +31,8 @@ boxes.forEach(box => {
             
             
             if (checkWinner()) {
-                alert(`${box.textContent} is the winner!`);
+                alert(`${box.textContent} is the winner! `);
+                gameplayer = false;
                 boxes.forEach(b => b.classList.add('active')); 
             }
            else if (Array.from(boxes).every(b => b.classList.contains('active'))) {

@@ -39,6 +39,11 @@ boxes.forEach(box => {
                 boxes.forEach(b => b.classList.add('active')); 
                 gameplayer = false;
             }
+            box.style.color = currentplayer === "X" ? "red" : "blue";
+            box.style.fontSize = "2em";
+            box.style.fontWeight = "bold";
+            box.style.textAlign = "center";
+            box.style.lineHeight = "100px";
             currentplayer = currentplayer === "X" ? "O" : "X";
     }
     });

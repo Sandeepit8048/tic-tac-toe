@@ -1,0 +1,58 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+body{
+    background-color: #b8dc4a;
+    margin: 0;
+    font-family: Arial, sans-serif; 
+    padding: 10px;
+}
+.box, .box1, .box2 {
+    width: 100px;
+    height: 150px;
+    margin: 5px;
+    background-color: #c1c71e;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.box3, .box4, .box5 {
+    width: 100px;
+    height: 150px;
+    margin: 5px;
+    background-color: #e94e77;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box6, .box7, .box8{
+    width: 100px;
+    height: 150px;
+    margin: 5px;
+    background-color: #f9a825;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ...existing code... */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    justify-items: center;
+    align-items: center;
+}
+
+/* ...existing code... */

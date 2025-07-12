@@ -19,6 +19,24 @@ function checkWinner() {
                boxes[a].textContent === boxes[c].textContent;
     });
 }
+function resetTimeout(callback, delay) {
+    setTimeout(() => {
+        callback();
+        currentplayer = currentplayer === "X" ? "O" : "X";
+        winnercombinations.forEach(combination => {
+            combination.forEach(index => {
+                boxes[index].classList.remove('active');
+                boxes[index].textContent = '';
+                boxes[index].style.color = '';
+                boxes[index].style.fontSize = '';
+                boxes[index].style.fontWeight = '';
+                boxes[index].style.textAlign = '';
+                boxes[index].style.lineHeight = '';
+            });
+        });
+        gameplayer = true;
+    }, delay);
+}
 
 boxes.forEach(box => {
     box.addEventListener('click', () => {
@@ -46,6 +64,19 @@ boxes.forEach(box => {
             box.style.textAlign = "center";
             box.style.lineHeight = "100px";
             currentplayer = currentplayer === "X" ? "O" : "X";
+
+    }else{
+        resetTimeout(() => {
+            box.classList.remove('active');
+            box.textContent = '';
+            box.style.color = '';
+            box.style.fontSize = '';
+            box.style.fontWeight = '';
+            box.style.textAlign = '';
+            box.style.lineHeight = '';
+            alert("Box already clicked, try another one!");
+            gameplayer = true;
+        }, 1000);
     }
     });
 
